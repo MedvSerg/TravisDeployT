@@ -18,6 +18,9 @@ script:
   #before deploy
   #deploy
   #after deploy
+  
+before_deploy: echo start
+
 delpoy:
   provider: pages
   skip_cleanup: true
@@ -26,3 +29,4 @@ delpoy:
   on:
     branch: master
     
+after_deploy: echo 50
