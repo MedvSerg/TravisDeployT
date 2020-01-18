@@ -20,6 +20,12 @@ jobs:
     name "deploy2"
     
 notifications:
+  email:
+    recipients: serg_m1@ukr.net
+  
+    on success: always
+    on failure: always
+  
   slack: 
     on success: change
     on failure: change
