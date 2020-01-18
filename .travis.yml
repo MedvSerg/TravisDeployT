@@ -5,28 +5,11 @@ python:
 #script
   #before script
   #script
-script: 
-  - mkdir ShortStory
-  - touch KKK
-  - echo 5
-  
-#after script
-  #after success
-  #after failure
 
-#deploy
-  #before deploy
-  #deploy
-  #after deploy
-  
-before_deploy: echo start
-
-delpoy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  keep_history: true
-  on:
-    branch: master
-    
-after_deploy: echo 50
+jobs:
+  include:
+  - stage: build
+    script: echo 5
+    script: echo test
+  - stage: deploy
+    script: echo deploy
