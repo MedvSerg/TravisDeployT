@@ -10,6 +10,9 @@ jobs:
   include:
   - stage: build
     script: echo 5
-    script: echo test
+    script: echo "test"
   - stage: deploy
-    script: echo deploy
+    script: echo "deploy"
+    name "deploy1"
+    script: echo "deploy again"
+    name "deploy2"
