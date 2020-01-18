@@ -2,15 +2,21 @@ language: python
 python:
 - 3.4
 
-#script
-  #before script
-  #script
+env:
+  - QA
+  - PROD
+  
+script: echo 5
 
 jobs:
   include:
   - stage: build
+    if: branch = master
     script: echo 5
-    script: echo "test"
+  - script: echo "test"
   - stage: deploy
     script: echo "deploy again"
     name "deploy2"
+    
+notifications:
+  slack: mikelearn:E868ULGEM1tpEtDJwl7ODigM
