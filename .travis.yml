@@ -19,4 +19,10 @@ jobs:
     name "deploy2"
     
 notifications:
-  slack: mikelearn:E868ULGEM1tpEtDJwl7ODigM
+  slack: 
+    on success: change
+    on failure: change
+    
+    rooms:
+     - mikelearn:E868ULGEM1tpEtDJwl7ODigM#test2-travis_learning
+#comments
